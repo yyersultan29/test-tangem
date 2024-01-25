@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Graphik LC";
+  src: url("./fonts/graphiklcweb_medium.ttf");
+}
+
+body {
+  font-size: 16px;
+  font-family: Graphik LC;
+  color: #ffffff;
+  margin: auto;
+  min-height: 200vh;
+}
+
+button {
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.top-banner {
+  container-type: inline-size;
+
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 10px; */
+}
+
+.top-banner-img {
+  width: 212px;
+  height: 54px;
+  background-image: url("./assets/display21\ 1.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.top-banner-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.text-bold {
+  font-weight: 600;
+}
+
+.text-yellow {
+  color: #d7a830;
+}
+
+.circle {
+  width: 3px;
+  height: 3px;
+  background-color: #444;
+  border-radius: 50%;
+}
+
+.top-banner-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 10px;
+}
+
+.top-banner-white-btn {
+  color: #0b0b0b;
+  font-family: "Graphik LC";
+  font-weight: 500;
+  line-height: 110%; /* 17.6px */
+  border-radius: 100px;
+  background-color: #ffffff;
+  padding: 10px 14px;
+}
+
+.banner-close-btn {
+  background-color: #0b0b0b;
+  color: #999;
+}
+.top-banner-dropdown-btn {
+  display: none;
+}
+
+/* Bottom */
+
+.bottom-banner {
+  opacity: 0;
+  position: fixed;
+  top: 30%;
+  right: 34px;
+  z-index: 999;
+  overflow: hidden;
+
+  width: 570px;
+  height: 319px;
+  border-radius: 16px;
+  background-color: #0b0b0b;
+
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-image: url("./assets/background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: opacity 0.5s ease;
+}
+.bottom-banner-left {
+  width: 50%;
+}
+.bottom-banner-right-title {
+  color: #fff;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 50.6px */
+  letter-spacing: -1.84px;
+}
+.bottom-banner-right-title-linear {
+  background: linear-gradient(to right, #7d5317, #eddf95);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.6px;
+  margin-top: 25px;
+  margin-bottom: 14px;
+}
+
+.bottom-banner-right {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom-banner-right-subtitle {
+  color: #6c6c70;
+}
+.bottom-banner-right-btn {
+  border-radius: 14px;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-weight: 500;
+}
+
+.bottom-banner-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* adaptive */
+
+@container (max-width : 976px) {
+  .top-banner-link-date {
+    display: none;
+  }
+
+  .top-banner-link-checkout-text {
+    display: none;
+  }
+  .top-banner-close-btn {
+    display: none;
+  }
+  .top-banner-buttons {
+    margin-right: 20px;
+  }
+  .top-banner-img {
+    width: 185px;
+  }
+}
+@container (max-width: 768px) {
+  .top-banner-white-btn {
+    display: none;
+  }
+
+  .top-banner-dropdown-btn {
+    display: block;
+  }
+  .circle {
+    display: none;
+  }
+  .top-banner-img {
+    width: 135px;
+  }
+}
+
+@container (max-width: 576px) {
+  .top-banner-link-end-text {
+    display: none;
+  }
+  .top-banner-img {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0;
+  }
+  .top-banner-links {
+    gap: 4px;
+  }
+}
+
+@container (max-width: 330px) {
+  .top-banner-dicsount {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom-banner {
+    width: 100%;
+    background-size: cover;
+    background-position: right;
+
+    border-radius: 0;
+    right: 0;
+  }
+
+  .bottom-banner-right {
+    width: 100%;
+  }
+  .bottom-banner-left {
+    width: 0%;
+  }
+}
